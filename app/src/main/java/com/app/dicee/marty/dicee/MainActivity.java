@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.dice5,
                 R.drawable.dice6};
 
-        //setting OnClick listenner on the button, THEN we are reating listenner
+        //setting OnClick listenner on the button, THEN we are creating listenner
         // itself with keyword "new"
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
