@@ -12,59 +12,81 @@
     <ImageView
         android:id="@+id/image_logo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/image_left_dice"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_logo"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dicee_logo" />
 
 
     <ImageView
         android:id="@+id/image_left_dice"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="55dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="58dp"
-        app:layout_constraintBottom_toTopOf="@+id/rollButton"
-        app:layout_constraintEnd_toStartOf="@+id/image_right_dice"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_logo"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/image_right_dice"
+
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
         app:srcCompat="@drawable/dice2" />
 
     <ImageView
         android:id="@+id/image_right_dice"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_left_dice"
-        app:layout_constraintTop_toTopOf="@+id/image_left_dice"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_logo"
+        app:layout_constraintLeft_toRightOf="@+id/image_left_dice"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
         app:srcCompat="@drawable/dice1" />
 
 
     <Button
         android:id="@+id/rollButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+
+
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="148dp"
-
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="148dp"
-
-
-        style="@style/Widget.AppCompat.Button.Colored"
-
-
+        android:layout_marginStart="8dp"
         android:text="@string/button_text"
         android:textColor="@color/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/guideline_bottom_button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_logo"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_logo" />
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_bottom_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
 
 </android.support.constraint.ConstraintLayout>
